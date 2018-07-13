@@ -1,0 +1,9 @@
+pour cet exploit il suffit simplement de modifier l'ISO avec un editeur de texte
+et d'ajouter a la ligne de configuration de grub la variable:
+
+****************
+rw init=bin/bash
+****************
+
+Ca permet de lier le processus init avec le binaire bash.
+Ceci aura pour effet d'avoir acces a la machine avec l'id root. rw ajoute les permissions read et write sur le systeme.

